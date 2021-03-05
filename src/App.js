@@ -9,7 +9,8 @@ import Header from './Components/Header.js';
 import PrivateRoute from './Components/PrivateRoute.js';
 import LoginPage from './AuthPages/LoginPage.js';
 import SignUpPage from './AuthPages/SignUpPage.js';
-import ToDosListPage from './ToDosListPage/ToDosListPage.js';
+import CampgroundSearchPage from './CampgroundSearchPage/CampgroundSearchPage.js';
+import FavoritePage from './FavoritePage/FavoritePage.js';
 import Home from './Home/Home.js';
 import { getUserFromLocalStorage, putUserInLocalStorage } from './local-storage-utils';
 
@@ -45,7 +46,7 @@ export default class App extends Component {
               exact
               token={user && user.token}
               render={(routerProps) =>
-                <ToDosListPage user={this.state.user}
+                <CampgroundSearchPage user={this.state.user}
                   {...routerProps}
                 />}
             />
